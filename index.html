@@ -4,11 +4,26 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./style.css">
-        <title>Fogadó</title>
+        <title>Fogadó - Szobák</title>
     </head>
     <body>
         <h1 id="title">Szobák:</h1>
-        <p id="subtitle">Elérhető szobáink a következőek:</p>
+        <br>
+        <div id="szuro">
+            <h1>Szűrő</h1>
+            <label for="nev">Név:</label>
+            <input type="text" id="nev" name="nev">
+            <br><br>
+            <label for="agyak">Ágyak száma:</label>
+            <input type="number" id="agyak" name="agyak">
+            <br><br>
+            <label for="potagyak">Pót ágyak száma:</label>
+            <input type="number" id="potagyak" name="potagyak">
+            <br><br>
+            <button id="kereses" onclick="Kereses()">Szűrés</button>
+        </div>
+        <br>
+        <p id="subtitle">Szűrés alapján talált szobák:</p>
         <script src="./script.js"></script>
     </body>
 </html>

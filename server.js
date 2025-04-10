@@ -39,7 +39,7 @@ app.get("/", (req, res) =>
     });
 });
 
-app.get("/szobak", (req, res) =>
+app.get("/szobak-osszes", (req, res) =>
 {
     const sql = "SELECT * FROM `szobak`";
 
@@ -53,6 +53,25 @@ app.get("/szobak", (req, res) =>
         return res.json(result);
     });
 });
+
+app.get("/szobak/:nev/:agyak/:potagyak", (req, res) =>
+{
+    const nev = req.params.nev;
+    const agyak = req.params.agyak;
+    const potagyak = req.params.potagyak;
+
+    const sql = `SELECT * FROM szobak WHERE sznev = ? AND agy = ? AND potagy = ?`;
+
+    database.query(sql, [nev, agyak, potagyak], (error, result) =>
+    {
+        if (error) {
+            return res.json({ error: error.message });
+        }
+
+        return res.json(result);
+    });
+});
+
 
 
 
