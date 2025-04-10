@@ -1,0 +1,42 @@
+*
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body
+{
+    background-color: rgb(255, 228, 196);
+}
+
+h1#title
+{
+    font-size: 36px;
+    text-align: center;
+}
+
+p#subtitle
+{
+    font-size: 20px;
+    text-align: center;
+}
+
+div#szoba
+{
+    width: 50%;
+    height: auto;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+div#szoba h1
+{
+    font-size: 26px;
+}
+
+div#szoba p
+{
+    font-size: 20px;
+}
